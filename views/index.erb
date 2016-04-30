@@ -5,7 +5,16 @@
     <title>MovieFinder</title>
   </head>
   <body>
-    <h1>MovieFinder</h1>
-
+    <h1>MovieFinder Search Results</h1>
+    <form>
+      <input type="search" name="title">
+    </form>
+    <% if @movie.plot %>
+      <%= erb :_movie %>
+    <% else %>
+      <p>
+        Sorry that movie is not in our database, Try again!
+      </p>
+    <% end %>
   </body>
 </html>
